@@ -1,0 +1,11 @@
+- name: Install nginx
+  hosts: all
+  remote_user: adminuser
+  become: true
+    
+  tasks:
+  - name: Install package on ubuntu
+    apt:
+      name: nginx
+      state: present
+      update_cache: true
